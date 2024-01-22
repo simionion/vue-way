@@ -1,0 +1,39 @@
+{
+  "smiley": {
+    "name": "Smiley",
+    "spots": 5,
+    "logo": "https://i.pravatar.cc/300?u=smiley",
+    "members": [
+      {
+        "name": "Evan You",
+        "email": "evan.you@gmail.com",
+        "status": "active",
+        "avatar": "https://i.pravatar.cc/300?u=evan.you"
+      },
+      {
+        "name": "Guillaume Chau",
+        "email": "guillaume.chau@gmail.com",
+        "status": "active",
+        "avatar": "https://i.pravatar.cc/300?u=guillaume.chau"
+      },
+      {
+        "name": "Jenil Gogari",
+        "email": "jenil.gogari@gmail.com",
+        "status": "inactive",
+        "avatar": "https://i.pravatar.cc/300?u=jenil.gogari"
+      },
+      {
+        "name": "Jérôme Toqué",
+        "email": "jerome.toque@gmail.com",
+        "status": "active",
+        "avatar": "https://i.pravatar.cc/300?u=jerome.toque"
+      },
+      {
+        "name": "Kazuya Kawaguchi",
+        "email": "kazuya.kawaquchi@gmail.com",
+        "status": "active",
+        "avatar": "https://i.pravatar.cc/300?u=kazuya.kawaquchi"
+      }
+    ]
+  }
+}
