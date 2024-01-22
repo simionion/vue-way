@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import TeamHeader from '@/components/Team/TeamHeader.vue'
 import TeamMember from '@/components/Team/TeamMember.vue'
-import Teams from '@/data/teams.json'
-const team = Teams.smiley
+import { useTeamStore } from '@/stores/TeamStore'
+
+const team = useTeamStore()
+team.fillInitialState()
 </script>
 <template>
-  <TeamHeader :team="team" />
+  <TeamHeader />
   <div class="flex flex-col gap-4 font-black">
     <TeamMember
       v-for="member in team.members"
@@ -16,7 +18,7 @@ const team = Teams.smiley
       :avatar="member.avatar"
     />
 
-    <p class="text-right italic text-gray-300" v-show="team.members.length === team.spots">
+    <p class="text-right italic text-gray-300" v-show="!team.spotsAvailable">
       There are no remaining spots. Upgrade your plan to add more
     </p>
   </div>
