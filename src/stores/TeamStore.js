@@ -11,8 +11,8 @@ export const useTeamStore = defineStore('team', {
   },
   actions: {
     async fillInitialState() {
-      let response = await import('@/data/teams.json')
-      let team = response.default.smiley
+      const response = await import('@/data/teams.json')
+      const team = response.default.smiley
       this.name = team.name
       this.spots = team.spots
       this.logo = team.logo

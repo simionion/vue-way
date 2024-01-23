@@ -1,7 +1,10 @@
 <script setup>
-import { useTeamStore } from '@/stores/TeamStore'
+import { useTeamStore } from '@/stores/TeamStore.js'
+import { useModalStore } from '@/stores/ModalStore.js'
+import TeamAddMember from '@/components/Team/TeamAddMember.vue'
 
 const team = useTeamStore()
+const modal = useModalStore()
 </script>
 
 <template>
@@ -10,6 +13,9 @@ const team = useTeamStore()
       <button
         class="rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700 disabled:cursor-not-allowed disabled:bg-gray-600 disabled:hover:bg-gray-600"
         :disabled="!team.spotsAvailable"
+        @click="
+          team.spotsAvailable && modal.show({ title: 'Add a new member', component: TeamAddMember })
+        "
       >
         Add Team Member ({{ team.spotsAvailable }} spot{{ team.spotsAvailable === 1 ? '' : 's' }}
         left)

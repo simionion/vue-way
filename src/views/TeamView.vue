@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import TeamHeader from '@/components/Team/TeamHeader.vue'
 import TeamMember from '@/components/Team/TeamMember.vue'
-import { useTeamStore } from '@/stores/TeamStore'
+import { useTeamStore } from '@/stores/TeamStore.js'
+import ModalView from '@/components/ModalView.vue'
 
 const team = useTeamStore()
 team.fillInitialState()
@@ -27,4 +28,6 @@ team.fillInitialState()
       {{ team.name }} - {{ team.spots }} Members Team
     </h5>
   </footer>
+
+  <ModalView> Here is the content of the modal </ModalView>
 </template>
